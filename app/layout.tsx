@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorantGaramond.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${cormorantGaramond.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-cream focus:text-charcoal">
           Skip to content

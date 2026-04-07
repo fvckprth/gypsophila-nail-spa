@@ -19,7 +19,7 @@ export default function DazzleDryFeature() {
             </p>
             <div className="mt-4">
               <Link
-                href="/services"
+                href="/book/online"
                 className="inline-flex items-center gap-2 text-charcoal hover:text-sage font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sage rounded-sm px-2 py-1 -ml-2"
               >
                 Book a Dazzle Dry Mani &rarr;

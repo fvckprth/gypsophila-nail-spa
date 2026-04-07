@@ -63,14 +63,12 @@ export default function HeroSection() {
           transition={{ type: "spring", damping: 20, stiffness: 100, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
         >
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/book/online"
             className="w-full sm:w-auto bg-blush hover:bg-blush-dark text-charcoal text-base font-medium px-8 py-3.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blush text-center shadow-sm"
           >
             Book Appointment
-          </a>
+          </Link>
           <Link
             href="/services"
             className="w-full sm:w-auto bg-transparent border border-charcoal/20 text-charcoal hover:bg-charcoal/5 text-base font-medium px-8 py-3.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-charcoal text-center"

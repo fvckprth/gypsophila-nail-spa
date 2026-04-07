@@ -1,5 +1,6 @@
 import FadeIn from "@/components/FadeIn";
 import { siteConfig, locations } from "@/lib/content";
+import Link from "next/link";
 
 export default function BookPage() {
   const loc = locations[0];
@@ -19,23 +20,29 @@ export default function BookPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-24">
           <FadeIn delay={0.2} className="flex flex-col gap-8">
             <div className="bg-blush-light/50 p-10 rounded-2xl flex flex-col gap-6 border border-blush/20">
+              <h2 className="font-display text-3xl text-charcoal">Book Online</h2>
+              <p className="text-muted font-sans">
+                Browse our full menu, select your preferred technician, and secure your time instantly.
+              </p>
+              <Link
+                href="/book/online"
+                className="w-fit bg-charcoal hover:bg-black text-cream text-base font-medium px-8 py-4 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-blush-light focus-visible:ring-charcoal shadow-sm"
+              >
+                Book Online
+              </Link>
+            </div>
+
+            <div className="bg-sand/20 p-10 rounded-2xl flex flex-col gap-6 border border-sand/40">
               <h2 className="font-display text-3xl text-charcoal">Book by Phone</h2>
               <p className="text-muted font-sans">
                 Prefer to speak with someone? Call us during business hours to schedule your appointment.
               </p>
               <a
                 href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
-                className="w-fit bg-charcoal hover:bg-black text-cream text-base font-medium px-8 py-4 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-blush-light focus-visible:ring-charcoal shadow-sm"
+                className="w-fit bg-cream-dark hover:bg-sand text-charcoal text-base font-medium px-8 py-4 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-sand focus-visible:ring-charcoal shadow-sm"
               >
                 {siteConfig.phone}
               </a>
-            </div>
-
-            <div className="bg-sand/20 p-10 rounded-2xl flex flex-col gap-6 border border-sand/40">
-              <h2 className="font-display text-3xl text-charcoal">Walk-ins Welcome</h2>
-              <p className="text-muted font-sans">
-                We always try to accommodate walk-ins. Weekday afternoons typically have the most availability.
-              </p>
             </div>
           </FadeIn>
 
@@ -49,6 +56,13 @@ export default function BookPage() {
                     <span className="text-muted">{h.time}</span>
                   </div>
                 ))}
+              </div>
+              
+              <div className="mt-8 pt-8 border-t border-sand/50">
+                <h3 className="font-display text-2xl text-charcoal mb-4">Walk-ins Welcome</h3>
+                <p className="text-muted font-sans">
+                  We always try to accommodate walk-ins. Weekday afternoons typically have the most availability.
+                </p>
               </div>
             </div>
           </FadeIn>

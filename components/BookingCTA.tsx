@@ -1,5 +1,7 @@
 import { siteConfig } from "@/lib/content";
 
+import Link from "next/link";
+
 export default function BookingCTA() {
   return (
     <section className="bg-blush-light text-charcoal py-24">
@@ -11,14 +13,12 @@ export default function BookingCTA() {
           Walk-ins welcome anytime. Or call ahead.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-6 mt-4">
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/book/online"
             className="bg-blush text-charcoal hover:bg-blush-dark text-base font-medium px-10 py-4 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-blush-light focus-visible:ring-charcoal shadow-sm w-full sm:w-auto"
           >
             Book Online
-          </a>
+          </Link>
           <a
             href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
             className="text-charcoal hover:text-blush-dark text-lg font-display tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-blush-light focus-visible:ring-charcoal rounded-sm px-2 py-1"
